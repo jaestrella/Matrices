@@ -51,3 +51,14 @@ void igualar(int filas, int columnas, int matriz[][MAX],int n){
 		}
 	}
 }
+
+int matrizNula(int filas, int columnas, int matriz[][MAX]){
+	int i,j;
+	for(i=0;i<filas;i++){
+		for(j=0;j<columnas;j++){
+			if(matriz[i][j]!=0){
+				return 1;
+			}
+		}
+	}return 0;
+}

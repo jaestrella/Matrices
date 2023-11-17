@@ -17,4 +17,6 @@ int devuelveMenor(int filas, int columnas, int matriz[][MAX]);
 
 void igualar(int filas, int columnas, int matriz[][MAX],int n);
 
+int matrizNula(int filas, int columnas, int matriz[][MAX]);
+
 #endif /* MATRICES_H_ */
