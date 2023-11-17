@@ -1,6 +1,6 @@
 /*
  ============================================================================
- Name        : Ejercicio02.c
+ Name        : Ejercicio03.c
  Author      : 
  Version     :
  Copyright   : Your copyright notice
@@ -13,8 +13,8 @@
 #include "matrices.h"
 int main(void) {
 	int filas,columnas;
-	int matriz[MAX][MAX];
-
+	float matriz[MAX][MAX];
+	int n;
 	do{
 		printf("Introduce el numero de filas (Entre 1 y %d):",MAX);
 		fflush(stdout);
@@ -29,14 +29,18 @@ int main(void) {
 
 	printf("Introduce la matriz: ");
 	puts("");
-	pedirMatriz(filas,columnas,matriz);
+	pedirMatrizReales(filas,columnas,matriz);
 
 	printf("Esta es la matriz: ");
 	puts("");
-	mostrarMatriz(filas,columnas,matriz);
+	mostrarMatrizReales(filas,columnas,matriz);
 
-	if(matrizNula(filas,columnas,matriz)==0){
-		printf("La matriz es nula");
+	printf("Introduce un numero: ");
+	fflush(stdout);
+	scanf("%d",&n);
+
+	if(mismoValor(filas,columnas,matriz,n)==1){
+		printf("La matriz tiene todos los valores iguales.");
 	}else
-		printf("La matriz es válida");
+		printf("La matriz no tiene todos los valores iguales al numero introducido.");
 }

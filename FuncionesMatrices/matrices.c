@@ -6,6 +6,7 @@
  */
 #include "matrices.h"
 #include <stdio.h>
+
 void pedirMatriz(int filas, int columnas, int matriz[][MAX]){
 	int i,j;
 
@@ -61,4 +62,39 @@ int matrizNula(int filas, int columnas, int matriz[][MAX]){
 			}
 		}
 	}return 0;
+}
+
+void pedirMatrizReales(int filas, int columnas, float matriz[][MAX]){
+	int i,j;
+
+	for (i = 0; i < filas; ++i) {
+		for (j = 0; j < columnas; ++j) {
+			printf("Introduce el elemento (%d,%d)",i,j);
+			fflush(stdout);
+			scanf("%f",&matriz[i][j]);
+		}
+	}
+}
+
+void mostrarMatrizReales(int filas, int columnas, float matriz[][MAX]){
+	int i,j;
+
+	for (i = 0; i < filas; ++i) {
+		for (j = 0; j < columnas; ++j) {
+			printf("%5.2f",matriz[i][j]);
+
+		}
+		printf("\n");
+	}
+}
+
+int mismoValor(int filas, int columnas, float matriz[][MAX], int n){
+	int i,j;
+	for(i=0;i<filas;i++){
+		for(j=0;j<columnas;j++){
+			if(matriz[i][j]!=n){
+				return 0;
+			}
+		}
+	}return 1;
 }
