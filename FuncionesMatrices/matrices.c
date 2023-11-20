@@ -98,3 +98,19 @@ int mismoValor(int filas, int columnas, float matriz[][MAX], int n){
 		}
 	}return 1;
 }
+
+int triangularSuperior(int filas, int columnas, float matriz[][MAX]){
+	int i, j;
+	for(i=0;i<filas;i++){
+		for(j=0;i>j;j++){
+			if(matriz[i][j]!=0){
+				return 0;//no es triangular superior
+			}
+		}
+	}
+	return 1;
+}
+
+int triangularInferior(int filas, int columas, float matriz[][MAX]){
+
+}
