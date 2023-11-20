@@ -25,7 +25,6 @@ void mostrarMatriz(int filas, int columnas, int matriz[][MAX]){
 	for (i = 0; i < filas; ++i) {
 		for (j = 0; j < columnas; ++j) {
 			printf("%5d",matriz[i][j]);
-
 		}
 		printf("\n");
 	}
@@ -111,6 +110,14 @@ int triangularSuperior(int filas, int columnas, float matriz[][MAX]){
 	return 1;
 }
 
-int triangularInferior(int filas, int columas, float matriz[][MAX]){
-
+int triangularInferior(int filas, int columnas, float matriz[][MAX]){
+	int i, j;
+	for(i=0;i<filas;i++){
+		for(j=i+1;j<columnas;j++){
+			if(matriz[i][j]!=0){
+				return 0;//no es triangular inferior
+			}
+		}
+	}
+	return 1;
 }

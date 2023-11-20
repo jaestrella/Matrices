@@ -27,6 +27,6 @@ int mismoValor(int filas, int columnas, float matriz[][MAX], int n);
 
 int triangularSuperior(int filas, int columnas, float matriz[][MAX]);
 
-int triangularInferior(int filas, int columas, float matriz[][MAX]);
+int triangularInferior(int filas, int columnas, float matriz[][MAX]);
 
 #endif /* MATRICES_H_ */
